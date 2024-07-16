@@ -1,3 +1,4 @@
+import { GraficoVendas } from '../Components/GraficoVendas';
 import { useData } from '../Context/DataContext'
 
 export const Resumo = () => {
@@ -21,7 +22,7 @@ export const Resumo = () => {
           <span> {data.filter((i) => i.status === 'processando').reduce((acc, item) => acc + item.preco, 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
         </div>
       </div>
-      <div className='box mb'>Gráficos</div>
+      <GraficoVendas data={data} />
     </section>
   )
 }
