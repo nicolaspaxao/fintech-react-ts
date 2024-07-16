@@ -6,6 +6,7 @@ import webhooks from '../assets/icons/webhooks.svg';
 import configuracoes from '../assets/icons/configuracoes.svg';
 import contato from '../assets/icons/contato.svg';
 import sair from '../assets/icons/sair.svg';
+import { NavLink } from 'react-router-dom';
 
 export const Sidednav = () => {
   return (
@@ -14,11 +15,11 @@ export const Sidednav = () => {
       <ul>
         <li>
           <span><img src={resumo} /></span>
-          <a href="">Resumo</a>
+          <NavLink to={''}>Resumo</NavLink>
         </li>
         <li>
           <span><img src={vendas} /></span>
-          <a href="">Vendas</a>
+          <NavLink to={'/vendas'}>Vendas</NavLink >
         </li>
         <li>
           <span><img src={webhooks} /></span>
